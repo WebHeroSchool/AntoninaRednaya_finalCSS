@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'pt_sans_captionbold';
+    src: url('Fonts/ptsanscaption-bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'pt_sans_captionregular';
+    src: url('Fonts/ptsanscaption-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
