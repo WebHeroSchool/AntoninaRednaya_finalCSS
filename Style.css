@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  height: 974px;
+  background: top left no-repeat url("Img/BGL.svg"), top right no-repeat url("Img/BGR.svg"), bottom center no-repeat url("Img/Phone.svg");
+}
+.wrapper {
+  width: 80.5%;
+  margin: auto;
+}
+.header {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+.logo__text {
+  padding-top: 31px;
+  padding-left: 55px;
+  font: 700 37px/52px pt_sans_captionregular;
+  letter-spacing: -1.5px;
+}
+.logo__rectangle {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-radius: 5px;
+  transform: rotate(45deg);
+  top: 53px;
+}
+.logo__rectangle_color_orange {
+  top: 43px;
+  left: 10px;
+  background: #FFBE4D;
+  opacity: .5;
+}
+.logo__rectangle_color_dark-orange {
+  left: 14px;
+  top: 46px;
+  background: #E89C38;
+  opacity: .5;
+  }
+.menu {
+  padding: 54px 6px 54px 0;
+}
+.menu__item {
+  font: 700 18px/23px pt_sans_captionbold;
+  padding-right: 21px;
+}
+.menu__item:last-child {
+  padding-right: 0;
+}
+.main__title {
+  font: 700 40px/51px pt_sans_captionbold;
+  text-align: center;
+  padding: 58px 327px;
+  margin: 0;
+}
+.main__buttons {
+  width: 27.5%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.main__buttons_applestore {
+  display: inline-block;
+  width: 195px;
+  height: 64px;
+  background: no-repeat url("Img/AppleStoreButton.svg");
+}
+.main__buttons_googleplay {
+  display: inline-block;
+  width: 195px;
+  height: 64px;
+  background: no-repeat url("Img/GooglePlayButton.svg");
+}
