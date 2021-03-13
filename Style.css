@@ -42,11 +42,39 @@ body {
   padding: 54px 6px 54px 0;
 }
 .menu__item {
+  position: relative;
   font: 700 18px/23px pt_sans_captionbold;
-  padding-right: 21px;
+  margin-right: 21px;
 }
 .menu__item:last-child {
-  padding-right: 0;
+  margin-right: 0;
+}
+.menu__item:hover {
+  opacity: .5;
+  cursor: pointer;
+}
+.menu__item:after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: #D2691E;
+  left: 0;
+  opacity: 0;
+  transition: opacity .3s;
+}
+.menu__item:hover:after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 3px;
+  background: #D2691E;
+  left: 0;
+}
+.menu__item:hover:after {
+  opacity: 1;
 }
 .main__title {
   font: 700 40px/51px pt_sans_captionbold;
@@ -55,7 +83,7 @@ body {
   margin: 0;
 }
 .main__buttons {
-  width: 27.5%;
+  width: 424px;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -66,9 +94,133 @@ body {
   height: 64px;
   background: no-repeat url("Img/AppleStoreButton.svg");
 }
+.main__buttons_applestore:hover {
+  opacity: .5;
+}
 .main__buttons_googleplay {
   display: inline-block;
   width: 195px;
   height: 64px;
   background: no-repeat url("Img/GooglePlayButton.svg");
+}
+.main__buttons_googleplay:hover {
+  opacity: .5;
+}
+/*adoptation for 1366*768*/
+@media (min-width: 1366px) and (max-width: 1919px) {
+  body {
+    height: 768px;
+    background: bottom left no-repeat url("Img/BGL1366.svg"), top right no-repeat url("Img/BGR1366.svg"), bottom center no-repeat url("Img/Phone1366.svg");
+  }
+  .wrapper {
+    width: 1006px;
+    margin: 0 121px 0 212px;
+  }
+  .logo__text {
+    padding-top: 27px;
+    padding-left: 50px;
+    font: 700 28px/52px pt_sans_captionregular;
+  }
+    .logo__rectangle {
+      width: 22px;
+      height: 22px;
+    }
+  .logo__rectangle_color_orange {
+      top: 39px;
+      left: 12px;
+      background: #FFBE4D;
+      opacity: .5;
+    }
+  .logo__rectangle_color_dark-orange {
+      left: 16px;
+      top: 43px;
+      background: #E89C38;
+      opacity: .5;
+    }
+  .menu {
+    padding-top: 50px;
+  }
+  .menu__item {
+    font: 700 14px/18px pt_sans_captionbold;
+    margin-right: 20px;
+  }
+  .main__title {
+    font: 700 32px/41px pt_sans_captionbold;
+    padding: 33px 154px 0 90px;
+  }
+  .main__buttons {
+    width: 291px;
+    margin: 40px 0 0 326px;
+  }
+  .main__buttons_applestore {
+    display: inline-block;
+    width: 134px;
+    height: 44px;
+    background: no-repeat url("Img/AppleStoreButton1366.svg");
+  }
+  .main__buttons_googleplay {
+    display: inline-block;
+    width: 134px;
+    height: 44px;
+    background: no-repeat url("Img/GooglePlayButton1366.svg");
+  }
+}
+/*adoptation for 1170*768*/
+@media (min-width: 1170px) and (max-width: 1365px) {
+  body {
+    height: 768px;
+    background: top left no-repeat url("Img/BGL1170.svg"), top right no-repeat url("Img/BGR1170.svg"), bottom center no-repeat url("Img/Phone1170.svg");
+  }
+  .wrapper {
+    width: 1007px;
+    margin: 0 130px 0 114px;
+  }
+  .logo__text {
+    padding-top: 27px;
+    padding-left: 50px;
+    font: 700 28px/52px pt_sans_captionregular;
+  }
+    .logo__rectangle {
+      width: 22px;
+      height: 22px;
+    }
+  .logo__rectangle_color_orange {
+      top: 39px;
+      left: 12px;
+      background: #FFBE4D;
+      opacity: .5;
+    }
+  .logo__rectangle_color_dark-orange {
+      left: 16px;
+      top: 43px;
+      background: #E89C38;
+      opacity: .5;
+    }
+  .menu {
+    padding-top: 50px;
+  }
+  .menu__item {
+    font: 700 14px/18px pt_sans_captionbold;
+    margin-right: 20px;
+  }
+  .main__title {
+    font: 700 32px/41px pt_sans_captionbold;
+    padding: 33px 154px 0 90px;
+  }
+  .main__buttons {
+    width: 291px;
+    margin: 40px 0 0 326px;
+  }
+  .main__buttons_applestore {
+    display: inline-block;
+    width: 134px;
+    height: 44px;
+    background: no-repeat url("Img/AppleStoreButton1366.svg");
+  }
+  .main__buttons_googleplay {
+    display: inline-block;
+    width: 134px;
+    height: 44px;
+    background: no-repeat url("Img/GooglePlayButton1366.svg");
+  }
 }
