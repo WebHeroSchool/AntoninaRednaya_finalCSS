@@ -10,3 +10,11 @@
     font-weight: normal;
     font-style: normal;
 }
+
+
+@font-face {
+    font-family: 'Museo_Sans_Cyrl';
+    src: url('Fonts/Museosanscyrl500.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}

@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  height: 974px;
-  background: top left no-repeat url("Img/BGL.svg"), top right no-repeat url("Img/BGR.svg"), bottom center no-repeat url("Img/Phone.svg");
+  height: 100vh;
+  background: bottom center no-repeat url("Img/Phone.svg"), top left no-repeat url("Img/BGL.svg"), top right no-repeat url("Img/BGR.svg");
 }
 .wrapper {
   width: 80.5%;
@@ -79,12 +79,14 @@ body {
 .main__title {
   font: 700 40px/51px pt_sans_captionbold;
   text-align: center;
-  padding: 58px 327px;
-  margin: 0;
+  width: 57%;
+  padding-top: 58px;
+  margin: auto;
 }
 .main__buttons {
-  width: 424px;
+  width: 422px;
   margin: auto;
+  padding-top: 58px;
   display: flex;
   justify-content: space-between;
 }
@@ -109,12 +111,11 @@ body {
 /*adoptation for 1366*768*/
 @media (min-width: 1366px) and (max-width: 1919px) {
   body {
-    height: 768px;
-    background: bottom left no-repeat url("Img/BGL1366.svg"), top right no-repeat url("Img/BGR1366.svg"), bottom center no-repeat url("Img/Phone1366.svg");
+    background: bottom center no-repeat url("Img/Phone1366.svg"), bottom left no-repeat url("Img/BGL1366.svg"), top right no-repeat url("Img/BGR1366.svg");
   }
   .wrapper {
-    width: 1006px;
-    margin: 0 121px 0 212px;
+    width: 73.5%;
+    margin: 0 44% 0 15.5%;
   }
   .logo__text {
     padding-top: 27px;
@@ -142,11 +143,15 @@ body {
   }
   .main__title {
     font: 700 32px/41px pt_sans_captionbold;
-    padding: 33px 154px 0 90px;
+    width: 75%;
+    margin-left: 9.5%;
+    padding-top: 32px;
   }
   .main__buttons {
-    width: 291px;
-    margin: 40px 0 0 326px;
+    width: 292px;
+    margin: auto;
+    padding-right: 62px;
+    padding-top: 41px;
   }
   .main__buttons_applestore {
     display: inline-block;
@@ -162,14 +167,13 @@ body {
   }
 }
 /*adoptation for 1170*768*/
-@media (min-width: 1170px) and (max-width: 1365px) {
+@media (min-width: 597px) and (max-width: 1366px) {
   body {
-    height: 768px;
-    background: top left no-repeat url("Img/BGL1170.svg"), top right no-repeat url("Img/BGR1170.svg"), bottom center no-repeat url("Img/Phone1170.svg");
+    background: bottom center no-repeat url("Img/Phone1170.svg"), top left no-repeat url("Img/BGL1170.svg"), top right no-repeat url("Img/BGR1170.svg");
   }
-  .wrapper {
-    width: 1007px;
-    margin: 0 130px 0 114px;
+    .wrapper {
+    width: 86%;
+    margin-left: 10%;
   }
   .logo__text {
     padding-top: 27px;
@@ -197,11 +201,14 @@ body {
   }
   .main__title {
     font: 700 32px/41px pt_sans_captionbold;
-    padding: 33px 154px 0 90px;
+    width: 71%;
+    margin-left: 11%;
+    padding-top: 33px;
   }
   .main__buttons {
     width: 291px;
-    margin: 40px 0 0 326px;
+    margin: auto;
+    padding: 40px 70px 0 0;
   }
   .main__buttons_applestore {
     display: inline-block;
@@ -214,5 +221,146 @@ body {
     width: 134px;
     height: 44px;
     background: no-repeat url("Img/GooglePlayButton1366.svg");
+  }
+}
+/*adoptation for mobile*/
+@media (max-width: 596px) {
+  body {
+    background: bottom center no-repeat url("Img/PhoneMobile.svg");
+  }
+  .wrapper {
+    width: 100%;
+  }
+  .logo {
+    position: relative;
+    margin: auto;
+    width: 200px;
+    margin-top: 109px;
+  }
+  .logo__text {
+    padding: 0 0 0 70px;
+    font: 700 42px/52px pt_sans_captionregular;
+  }
+  .logo__rectangle {
+    position: absolute;
+    width: 33px;
+    height: 33px;
+  }
+  .logo__rectangle_color_orange {
+    top: 6px;
+    left: 14px;
+  }
+  .logo__rectangle_color_dark-orange {
+    left: 19px;
+    top: 11px;
+    }
+  .menu {
+    display: none;
+  }
+  .main__title {
+    font: 700 24px/31px pt_sans_captionbold;
+    width: auto;
+    margin: 0 15% 0 12%;
+    padding: 25px 0 0 0;
+  }
+  .main__buttons {
+    width: 226px;
+    padding-top: 67px;
+    padding-right: 7px;
+  }
+  .main__buttons_applestore {
+    display: inline-block;
+    width: 108px;
+    height: 35px;
+    background: no-repeat url("Img/AppleStoreButtonMobile.svg");
+  }
+  .main__buttons_googleplay {
+    display: inline-block;
+    width: 108px;
+    height: 35px;
+    background: no-repeat url("Img/GooglePlayButtonMobile.svg");
+  }
+}
+@media (max-height: 650px) and (max-width: 373px) {
+  body {
+    height: 690px;
+  }
+}
+/*бургер-меню*/
+#menu__toggle {
+  opacity: 0;
+}
+.menu__btn {
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 40px;
+  right: 38px;
+  width: 25px;
+  height: 44px;
+  cursor: pointer;
+}
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #FF9100;
+}
+.menu__btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu__btn > span::after {
+  content: '';
+  top: 8px;
+}
+.menu__box {
+  z-index: 1;
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 178px 0;
+  list-style: none;
+  text-align: center;
+  align-items: center;
+  background-color: #fff;
+}
+.menu__item_mobile {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font: 700 30px/36px Museo_Sans_Cyrl;
+  text-decoration: none;
+}
+#menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  left: 0;
+}
+/*скрывает бургер-меню на высоком разрешении*/
+@media (min-width: 597px) {
+  .hamburger-menu {
+    display: none;
+  }
+  .menu__box {
+    display: none;
   }
 }
